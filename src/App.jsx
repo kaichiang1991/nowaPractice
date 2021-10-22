@@ -12,6 +12,7 @@ import ImageContainer from './components/common/ImageContainer';
 import ArticleContainer from './components/common/ArticleContainer'
 import Button from './components/common/Button'
 import { BrowserRouter } from 'react-router-dom';
+import SectionTitle from './components/common/SectionTitle'
 
 const StyledMainContainer = styled.main `
   
@@ -38,6 +39,10 @@ const StyledAboutContent = styled.div `
   display: flex;
   justify-content: space-between;
   align-items: center;
+`
+
+const StyledProductSection = styled.div `
+
 `
 
 const App = () => {
@@ -79,6 +84,12 @@ const App = () => {
               </StyledAboutContent>
             </Container>
           </StyledAboutSection>
+          {/* Product */}
+          <StyledProductSection>
+            <Container center>
+              <SectionTitle title='nowa cube' content='キューブをあければ、広がる幸せ'/>
+            </Container>
+          </StyledProductSection>
         </StyledMainContainer>
       </DefaultLayout>
     </BrowserRouter>
