@@ -13,6 +13,14 @@ import ArticleContainer from './components/common/ArticleContainer'
 import Button from './components/common/Button'
 import { BrowserRouter } from 'react-router-dom';
 import SectionTitle from './components/common/SectionTitle'
+import collection from './img/product/feature_collection_1080x.jpeg'
+import ProdcutItem from './components/product/ProdcutItem'
+import product1 from './img/product/nowacube01_540x.jpeg'
+import product2 from './img/product/nowacube02_540x.jpeg'
+import product3 from './img/product/nowacube03_540x.jpeg'
+import product4 from './img/product/nowacube04_540x.jpeg'
+import product5 from './img/product/nowacube05_cb766ea8-9c77-4cf2-9335-1779d283f967_540x.jpeg'
+import product6 from './img/product/nowacube06_540x.jpeg'
 
 const StyledMainContainer = styled.main `
   
@@ -43,6 +51,19 @@ const StyledAboutContent = styled.div `
 
 const StyledProductSection = styled.div `
 
+`
+
+const StyledGalleryContainer = styled.div `
+  display: flex;
+  flex-direction: column;
+`
+
+const StyledProductContainer = styled.div `
+  margin-top: 10px;
+  margin-left: -16px;
+
+  display: flex;
+  flex-wrap: wrap;
 `
 
 const App = () => {
@@ -88,6 +109,17 @@ const App = () => {
           <StyledProductSection>
             <Container center>
               <SectionTitle title='nowa cube' content='キューブをあければ、広がる幸せ'/>
+              <StyledGalleryContainer>
+                <ImageContainer width="100%" style={{margin: '12px 0'}}><img src={collection} alt="collection" /></ImageContainer>
+                <StyledProductContainer>
+                  <ProdcutItem src={product1} title='nowa cube 全犬種セット' description='¥2,750'/>
+                  <ProdcutItem src={product2} title='nowa cube 全犬種セット' description='¥2,750'/>
+                  <ProdcutItem src={product3} title='nowa cube 全犬種セット' description='¥2,750'/>
+                  <ProdcutItem src={product4} title='nowa cube 全犬種セット' description='¥2,750'/>
+                  <ProdcutItem src={product5} title='nowa cube 全犬種セット' description='¥2,750'/>
+                  <ProdcutItem src={product6} title='nowa cube 全犬種セット' description='¥2,750'/>
+                </StyledProductContainer>
+              </StyledGalleryContainer>
             </Container>
           </StyledProductSection>
         </StyledMainContainer>
