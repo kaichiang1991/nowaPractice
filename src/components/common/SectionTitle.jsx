@@ -14,9 +14,9 @@ const StyledSectionTitle = styled.div `
   }
 `
 
-const SectionTitle = ({title, content}) => {
+const SectionTitle = ({title, content, style}) => {
   return (
-    <StyledSectionTitle>
+    <StyledSectionTitle style={style}>
       <p className='section-title'><strong>{title}</strong></p>
       <p className='section-content'>{content}</p>
     </StyledSectionTitle>

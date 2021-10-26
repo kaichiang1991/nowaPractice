@@ -4,7 +4,7 @@ const ImageContainer = styled.div `
   width: ${props => props.width || '45%'};
 
   img{
-    max-width: 100%;
+    width: 100%;
   }
 `
 
