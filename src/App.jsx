@@ -30,6 +30,7 @@ import CustomCaraousel from './components/carousel/CustomCaraousel';
 import journal1 from './img/journal/top_journal01_pc_1080x_f7a2fc34-e479-4797-84f4-e0a6e77d6c0f_1080x.jpeg'
 import journal2 from './img/journal/top_journal01_pc_1080x.jpeg'
 import journal3 from './img/journal/top_journal02_pc_1080x.jpeg'
+import Wanbassador from './components/carousel/Wanbassador';
 
 const StyledMainContainer = styled.main `
   
@@ -116,13 +117,17 @@ const StyledLinkContainer = styled.div `
   }
 `
 
+const StyledWanbassadorSection = styled.div `
+
+`
+
 const App = () => {
   return (
     <BrowserRouter>
       <DefaultLayout>
         <StyledMainContainer>
           {/* 跑馬燈 */}
-          <Carousel effect='fade' autoplayr>
+          <Carousel effect='fade' autoplay>
             <Image src={banner1} height={480}/>
             <Image src={banner2} height={480}/>
           </Carousel>
@@ -198,6 +203,11 @@ const App = () => {
               </StyledLinkContainer>
             </StyledJournalContainer>
           </StyledJournalSection>
+          {/* Wanbassador */}
+          <StyledWanbassadorSection>
+            <SectionTitle title='Wanbassador'/>
+            <Wanbassador />
+          </StyledWanbassadorSection>
         </StyledMainContainer>
       </DefaultLayout>
     </BrowserRouter>
