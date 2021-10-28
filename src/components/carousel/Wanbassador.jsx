@@ -6,6 +6,7 @@ import wanbassador2 from '../../img/wanbassador/wanbassador02.jpeg'
 import wanbassador3 from '../../img/wanbassador/wanbassador03.jpeg'
 import wanbassador4 from '../../img/wanbassador/wanbassador04.jpeg'
 import wanbassador5 from '../../img/wanbassador/wanbassador05.jpeg'
+import SquareImage from '../common/SquareImage'
 
 const arrowPadding = '20px'
 const StyledWanbassador = styled.div `
@@ -38,30 +39,6 @@ const ContentContainer = styled.div `
 const AllImageContainer = styled.div `
   width: 300%;
 `
-
-const StyledImageContainer = styled.div `
-  width: ${25/3}%;
-  padding: 10px;
-  display: inline-block;
-
-  div{
-    width: 100%;
-  }
-
-  div img{
-    max-width: 100%;
-  }
-`
-
-const SquareImage = forwardRef(({ src }, ref) => {
-  return (
-    <StyledImageContainer ref={ref}>
-      <div>
-        <img src={src} alt="wanbassador" />
-      </div>
-    </StyledImageContainer>
-  )
-})
 
 const Wanbassador = () => {
 

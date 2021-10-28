@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Link } from 'react-router-dom'
 
 const StyledButton = styled.div `
@@ -8,6 +8,12 @@ const StyledButton = styled.div `
   line-height: 1.42;
   letter-spacing: .3em;
   
+  ${props => props.center && css `
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  `}
+
   a{
     display: block;
     color: #fff;
@@ -15,11 +21,11 @@ const StyledButton = styled.div `
   }
 `
 
-const Button = ({text, style, toPath}) => {
+const Button = ({text, style, toPath, center}) => {
   const _text = text || 'Default Button'
   const _path = toPath || '/'
   return (
-    <StyledButton style={style}>
+    <StyledButton style={style} center={center}>
       <Link to={_path}>{_text}</Link>
     </StyledButton>
   )

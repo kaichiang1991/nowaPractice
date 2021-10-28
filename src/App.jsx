@@ -31,6 +31,15 @@ import journal1 from './img/journal/top_journal01_pc_1080x_f7a2fc34-e479-4797-84
 import journal2 from './img/journal/top_journal01_pc_1080x.jpeg'
 import journal3 from './img/journal/top_journal02_pc_1080x.jpeg'
 import Wanbassador from './components/carousel/Wanbassador';
+import SquareImage from './components/common/SquareImage'
+import nowaday1 from './img/nowaday/top_insta01.jpeg'
+import nowaday2 from './img/nowaday/top_insta02.jpeg'
+import nowaday3 from './img/nowaday/top_insta03.jpeg'
+import nowaday4 from './img/nowaday/top_insta04.jpeg'
+import nowaday5 from './img/nowaday/top_insta05.jpeg'
+import nowaday6 from './img/nowaday/top_insta06.jpeg'
+import nowaday7 from './img/nowaday/top_insta07.jpeg'
+import nowaday8 from './img/nowaday/top_insta08.jpeg'
 
 const StyledMainContainer = styled.main `
   
@@ -121,6 +130,15 @@ const StyledWanbassadorSection = styled.div `
 
 `
 
+const StyledOneNowaDaySection = styled.div `
+
+`
+
+const StyledOneNowaDayContainer = styled.div `
+  display : flex;
+  flex-wrap: wrap;
+`
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -208,6 +226,25 @@ const App = () => {
             <SectionTitle title='Wanbassador'/>
             <Wanbassador />
           </StyledWanbassadorSection>
+          {/* OneNowaDay */}
+          <StyledOneNowaDaySection>
+            <SectionTitle title='One nowa day' content='nowaプロダクトのある毎日' />
+            <StyledOneNowaDayContainer>
+              <Container center>
+                <SquareImage src={nowaday1} width={'25%'}/>
+                <SquareImage src={nowaday2} width={'25%'}/>
+                <SquareImage src={nowaday3} width={'25%'}/>
+                <SquareImage src={nowaday4} width={'25%'}/>
+                <SquareImage src={nowaday5} width={'25%'}/>
+                <SquareImage src={nowaday6} width={'25%'}/>
+                <SquareImage src={nowaday7} width={'25%'}/>
+                <SquareImage src={nowaday8} width={'25%'}/>
+              </Container>
+            </StyledOneNowaDayContainer>
+            <Container center>
+            <Button style={{marginTop: 48, marginBottom: 160, width: 250}} center text='公式Instagram' toPath='/instagram'/>
+            </Container>
+          </StyledOneNowaDaySection>
         </StyledMainContainer>
       </DefaultLayout>
     </BrowserRouter>
